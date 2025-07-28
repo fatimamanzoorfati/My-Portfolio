@@ -95,16 +95,16 @@ const activePortfolio = () => {
     portfolioDetails.forEach(detail => {
         detail.classList.remove('active');
     });
-    // portfolioDetails[index].classList.add('active');
+    portfolioDetails[index].classList.add('active');
 }
 
 arrowRight.addEventListener('click', () => {
-    if (index < 9) {
+    if (index < 0) {
         index++;
         arrowLeft.classList.remove('disabled');
     }
     else {
-        index = 8;
+        index = 1;
         arrowRight.classList.add('disabled');
     }
 
@@ -112,7 +112,7 @@ arrowRight.addEventListener('click', () => {
 });
 
 arrowLeft.addEventListener('click', () => {
-    if (index > 1) {
+    if (index > 0) {
         index--;
         arrowRight.classList.remove('disabled');
     }
